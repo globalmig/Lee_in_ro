@@ -1,101 +1,88 @@
+import Link from "next/link";
+import React from "react";
+import { FaPrint } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 import Image from "next/image";
 
-export default function Home() {
+export default function page() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <ul className="absolute  left-10 top-1/2 text-white z-10">
+        <li className="mb-4">· 상담신청</li>
+        <li className="mb-4">· 사업영역</li>
+        <li className="mb-4">· 회사소개</li>
+      </ul>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <div className="absolute text-white right-10 top-5">
+        <p className="font-semibold">고객지원센터 1833-4980</p>
+        <div className="flex gap-2 my-2">
+          <FaPrint />
+          <p className="text-sm font-light">02-415-3559</p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="flex gap-2">
+          <MdEmail />
+          <p className="text-sm font-light">jklee7711@naver.com</p>
+        </div>
+      </div>
+
+      <section className="h-screen bg-cover bg-center bg-no-repeat text-white" style={{ backgroundImage: "url('/hero_bg.png')" }}>
+        <div className="mainTitle flex flex-col justify-center items-center h-full gap-12">
+          <div className="text-center">
+            <p className="text-5xl mb-4 ">내 채권의 미래</p>
+            <h2>미래신용 정보</h2>
+          </div>
+
+          <p className="text-center">
+            더 이상 스트레스 받지 마세요!
+            <br />
+            대신 해결해드립니다.
+          </p>
+          <Link href={"/contact"} className="py-4 px-20 border text-2xl hover:pink hover:font-bold hover:border-[#c40452]">
+            상담신청
+          </Link>
+        </div>
+      </section>
+      <section className="h-screen bg-cover bg-center bg-no-repeat text-white text-center flex flex-col justify-center items-center" style={{ backgroundImage: "url('/second_bg.png')" }}>
+        <h2>미래신용정보 서비스</h2>
+        <div className="itemList grid grid-cols-2 md:grid-cols-4 max-w-[1440px] w-full my-12 md:my-40">
+          <div className="CRM flex flex-col justify-center items-center">
+            <Image src={"/icon/CRM.png"} alt="CRM서비스" width={200} height={200} className="" />
+            <h3>CRM 서비스</h3>
+            <p className="text-sm">
+              상담·마케팅·심사·모니터링
+              <br />
+              고객관리 통합 솔루션 제공
+            </p>
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <Image src={"/icon/money.png"} alt="채권관리" width={200} height={200} className="" />
+            <h3>채권관리</h3>
+            <p className="text-sm text-center">
+              미납요금 상담부터 회수까지,
+              <br /> 토탈 미납관리 서비스 제공
+            </p>
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <Image src={"/icon/management.png"} alt="민,상사 채권관리" width={200} height={200} className="" />
+            <h3>민,상사 채권관리</h3>
+            <p className="text-sm text-center">
+              권원이 인정된 개인 대여금,
+              <br /> 민사·상사채권 관리 지원
+            </p>
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <Image src={"/icon/search.png"} alt="신용조사" width={200} height={200} className="" />
+            <h3>신용조사</h3>
+            <p className="text-sm text-center">
+              거래 상대방의 신용상태 및<br /> 재산 보유 여부 조사
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="h-screen">
+        <Image src={"/AI_bg.png"} alt="" width={100} height={100} className="w-full" />
+        <Image src={"/AI_full_body.png"} alt="" width={100} height={100} className="w-full" />
+      </section>
+    </>
   );
 }
