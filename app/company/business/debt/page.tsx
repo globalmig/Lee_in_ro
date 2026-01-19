@@ -3,6 +3,7 @@ import Hero from "@/components/common/Hero";
 import React from "react";
 import Image from "next/image";
 import ContactBtn from "@/components/common/ContactBtn";
+import Tabs from "@/components/common/Tabs";
 
 export default function page() {
   const data03 = [
@@ -17,6 +18,9 @@ export default function page() {
   return (
     <div>
       <Hero img={"/hero_bg.png"} title={"사업영역"} />
+
+      <Tabs />
+
       <section className="w-full max-w-[1440px] px-4 flex flex-col gap-20 mx-auto">
         <div className="01">
           <DotTitle title={"업무개요"} />

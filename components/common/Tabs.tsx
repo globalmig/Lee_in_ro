@@ -4,9 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const TABS = [
-  { label: "채권관리", href: "/business/debt" },
-  { label: "CRM 서비스", href: "/business/crm" },
-  { label: "신용조사", href: "/business/credit" },
+  { label: "채권관리", href: "/company/business/debt" },
+  { label: "CRM 서비스", href: "/company/business/crm" },
+  { label: "신용조사", href: "/company/business/credit" },
 ];
 
 export default function Tabs() {
@@ -15,7 +15,7 @@ export default function Tabs() {
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
 
   return (
-    <nav className="w-full">
+    <nav className="w-full mb-20">
       <div className="mx-auto w-full max-w-[980px] px-5 sm:px-8">
         <div className="rounded-xl bg-[#F5F3F4] p-2">
           <ul className="grid grid-cols-3">
