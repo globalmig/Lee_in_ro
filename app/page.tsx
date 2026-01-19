@@ -150,7 +150,7 @@ export default function page() {
               <Link href="/company/introduce" className="border border-[#C40452] rounded-lg px-10 lg:px-14 py-3 lg:py-4 text-[#C40452] font-bold bg-white/80 hover:bg-white transition">
                 회사소개 &gt;
               </Link>
-              <Link href="/company/debt" className="border border-[#C40452] rounded-lg px-10 lg:px-14 py-3 lg:py-4 text-[#C40452] font-bold bg-white/80 hover:bg-white transition">
+              <Link href="/company/business/debt" className="border border-[#C40452] rounded-lg px-10 lg:px-14 py-3 lg:py-4 text-[#C40452] font-bold bg-white/80 hover:bg-white transition">
                 사업 영역 &gt;
               </Link>
             </div>
