@@ -29,7 +29,6 @@ export default function page() {
           </Link>
         </div>
       </section>
-
       {/* 사업영역 */}
       <section id="business" className="h-screen bg-cover bg-center bg-no-repeat text-white text-center flex flex-col justify-center items-center" style={{ backgroundImage: "url('/second_bg.png')" }}>
         <h2>미래신용정보 서비스</h2>
@@ -68,7 +67,6 @@ export default function page() {
           </div>
         </div>
       </section>
-
       {/* 회사소개 */}
       <section id="company" className="relative w-full h-screen overflow-hidden">
         {/* BG */}

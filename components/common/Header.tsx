@@ -23,9 +23,9 @@ export default function Header() {
 
   const menuItems = [
     { name: "홈", href: "/" },
-    { name: "메뉴소개", href: "/menus" },
-    { name: "매장소개", href: "/location" },
-    { name: "공지사항", href: "/board" },
+    { name: "회사소개", href: "/company/introduce" },
+    { name: "회사연혁", href: "/company/history" },
+    { name: "사업영역", href: "/company/business" },
     { name: "가맹문의", href: "/franchise" },
   ];
 
