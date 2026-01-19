@@ -6,8 +6,8 @@ export default function Footer() {
       <p>
         주소 : 서울특별시 영등포구 영등포로 59, 3층(양평동1가, MCI빌딩)
         <br />
-        TEL : 1833-4980　FAX : 02-415-3559　E-mail : jklee7711@naver.com <br />
-        Copyrightⓒ 미래신용정보 All Rights Reserved.
+        TEL : 02-3451-9734　FAX : 02-415-3559　E-mail : 232237@mirae22.co.kr <br />
+        Copyrightⓒ 이인로 All Rights Reserved.
       </p>
     </div>
   );

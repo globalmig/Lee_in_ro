@@ -10,9 +10,8 @@ export default function page() {
     <>
       {/* 퀵메뉴 */}
       <QuickMenu />
-
       {/* 상담신청-히어로섹션 */}
-      <section id="contact" className="h-screen bg-cover bg-center bg-no-repeat text-white" style={{ backgroundImage: "url('/hero_bg.png')" }}>
+      <section id="contact" className="snap-start h-screen bg-cover bg-center bg-no-repeat text-white" style={{ backgroundImage: "url('/hero_bg.png')" }}>
         <div className="mainTitle flex flex-col justify-center items-center h-full gap-12">
           <div className="text-center">
             <p className="text-5xl mb-4 ">내 채권의 미래</p>
@@ -30,7 +29,11 @@ export default function page() {
         </div>
       </section>
       {/* 사업영역 */}
-      <section id="business" className="h-screen bg-cover bg-center bg-no-repeat text-white text-center flex flex-col justify-center items-center" style={{ backgroundImage: "url('/second_bg.png')" }}>
+      <section
+        id="business"
+        className="snap-start h-screen bg-cover bg-center bg-no-repeat text-white text-center flex flex-col justify-center items-center"
+        style={{ backgroundImage: "url('/second_bg.png')" }}
+      >
         <h2>미래신용정보 서비스</h2>
         <div className="itemList grid grid-cols-2 md:grid-cols-4 max-w-[1440px] w-full my-12 md:my-40">
           <div className="CRM flex flex-col justify-center items-center">
@@ -68,7 +71,7 @@ export default function page() {
         </div>
       </section>
       {/* 회사소개 */}
-      <section id="company" className="relative w-full h-screen overflow-hidden">
+      <section id="company" className="snap-start relative w-full h-screen overflow-hidden">
         {/* BG */}
         <div className="absolute inset-x-0 bottom-0 h-[62%] sm:h-[56%] md:h-[52%]">
           <Image src="/AI_bg.png" alt="" fill className="object-cover object-center" priority />
