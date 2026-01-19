@@ -147,10 +147,10 @@ export default function page() {
           {/* Right top buttons: desktop only */}
           <div className="hidden md:block absolute right-10 top-10 z-20">
             <div className="flex flex-col gap-4 lg:gap-6">
-              <Link href="/company" className="border border-[#C40452] rounded-lg px-10 lg:px-14 py-3 lg:py-4 text-[#C40452] font-bold bg-white/80 hover:bg-white transition">
+              <Link href="/company/introduce" className="border border-[#C40452] rounded-lg px-10 lg:px-14 py-3 lg:py-4 text-[#C40452] font-bold bg-white/80 hover:bg-white transition">
                 회사소개 &gt;
               </Link>
-              <Link href="/company" className="border border-[#C40452] rounded-lg px-10 lg:px-14 py-3 lg:py-4 text-[#C40452] font-bold bg-white/80 hover:bg-white transition">
+              <Link href="/company/debt" className="border border-[#C40452] rounded-lg px-10 lg:px-14 py-3 lg:py-4 text-[#C40452] font-bold bg-white/80 hover:bg-white transition">
                 사업 영역 &gt;
               </Link>
             </div>

@@ -53,7 +53,7 @@ export default function Header() {
           </div>
           <div className="flex items-start gap-2 my-2 justify-end">
             <MdEmail className="text-sm md:text-base" />
-            <p className="text-xs md:text-sm font-light">jklee7711@naver.com</p>
+            <p className="text-xs md:text-sm font-light">232237@mirae22.co.kr</p>
           </div>
         </div>
       </header>

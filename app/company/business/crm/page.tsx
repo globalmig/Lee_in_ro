@@ -47,7 +47,7 @@ export default function page() {
 
   return (
     <div>
-      <Hero img={"/hero_bg.png"} title={"사업영역"} />
+      <Hero img={"/business_hero_bg.png"} title={"사업영역"} />
 
       <Tabs />
 
