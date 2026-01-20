@@ -5,12 +5,6 @@ export async function middleware(req: NextRequest) {
   const res = NextResponse.next();
   const pathname = req.nextUrl.pathname;
 
-  // ✅ 로그인 페이지는 통과 (너가 옮긴 경로로 바꾸기)
-  if (pathname === "/login") return res;
-
-  // /admin만 보호
-  if (!pathname.startsWith("/admin")) return res;
-
   const supabase = createServerClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!, {
     cookies: {
       getAll: () => req.cookies.getAll(),
@@ -22,10 +16,21 @@ export async function middleware(req: NextRequest) {
     },
   });
 
-  const { data: userData, error: userErr } = await supabase.auth.getUser();
-  const user = userData?.user;
+  const { data } = await supabase.auth.getUser();
+  const user = data.user;
 
-  if (userErr) console.error("getUser error:", userErr);
+  // ✅ 로그인된 상태로 /login 들어오면 /admin으로
+  if (pathname === "/login" && user) {
+    return NextResponse.redirect(new URL("/admin", req.url));
+  }
+
+  // ✅ /login은 기본 통과 (비로그인일 때만 로그인폼 보여줌)
+  if (pathname === "/login") {
+    return res;
+  }
+
+  // /admin만 보호
+  if (!pathname.startsWith("/admin")) return res;
 
   if (!user) {
     const url = new URL("/login", req.url);
@@ -33,15 +38,10 @@ export async function middleware(req: NextRequest) {
     return NextResponse.redirect(url);
   }
 
-  // ✅ 관리자 체크 (error도 반드시 확인)
-  const { data: adminRow, error: adminErr } = await supabase.from("admin_users").select("user_id").eq("user_id", user.id).maybeSingle();
+  // 관리자 체크
+  const { data: isAdmin } = await supabase.from("admin_users").select("user_id").eq("user_id", user.id).maybeSingle();
 
-  if (adminErr) {
-    console.error("admin check error:", adminErr);
-    return NextResponse.redirect(new URL("/", req.url));
-  }
-
-  if (!adminRow) {
+  if (!isAdmin) {
     return NextResponse.redirect(new URL("/", req.url));
   }
 
@@ -49,5 +49,5 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/admin/:path*"],
+  matcher: ["/admin/:path*", "/login"],
 };
