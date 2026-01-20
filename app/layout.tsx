@@ -16,8 +16,7 @@ const geistMono = localFont({
 const SITE_URL = "https://miraeinro.com";
 const SITE_NAME = "미래신용정보 이인로";
 const TITLE = "미래신용정보 이인로 | 채권관리, 신용조사, CRM 고객관리";
-const DESCRIPTION =
-  "상담·마케팅·심사·모니터링을 하나로 연결하는 CRM 고객관리 통합 솔루션. 채권관리(미납요금 상담~회수), 민·상사 채권관리(개인 대여금/민사·상사 채권), 신용조사(신용상태·재산 보유 여부 조사)까지 지원합니다.";
+const DESCRIPTION = "상담·마케팅·심사·모니터링과 채권관리, 신용조사까지 제공하는 CRM 고객관리 통합 솔루션";
 const KEYWORDS = [
   "CRM",
   "CRM 서비스",
