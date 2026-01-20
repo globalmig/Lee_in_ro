@@ -28,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {/* TODO: admin페이지에서 예외처리 */}
         <Header />
         <div className="min-h-screen">{children}</div>
 
