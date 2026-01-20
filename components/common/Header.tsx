@@ -190,7 +190,7 @@ export default function Header() {
                 }}
               >
                 {supportGroup.name}
-                <span className={`text-base sm:text-lg transition-transform ${openGroup === "support" ? "rotate-180" : ""}`}>▾</span>
+                <span className={`transition-transform ${openGroup === "support" ? "rotate-180" : ""}`}>▾</span>
               </button>
 
               <div className={`mt-4 overflow-hidden transition-[max-height,opacity] duration-300 ${openGroup === "support" ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
