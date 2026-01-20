@@ -98,7 +98,7 @@ export default function Header() {
         </button>
 
         {/* 메뉴 컨텐츠 */}
-        <nav className="flex items-center justify-center h-full px-6">
+        <nav className="flex items-start justify-center h-full px-6 pt-20 pb-52 overflow-y-auto overscroll-contain">
           <div className="w-full max-w-[560px]">
             {/* 상단 단일 메뉴 */}
             <ul className="flex flex-col gap-4">
@@ -217,7 +217,7 @@ export default function Header() {
         </nav>
 
         {/* 하단 연락처 */}
-        <div className="absolute bottom-8 left-0 right-0 text-center text-white px-6">
+        <div className="fixed bottom-0 left-0 right-0 text-center text-white px-6 pb-6 pt-5 bg-black/80 backdrop-blur-sm border-t border-white/10 z-[60]">
           <p className="text-xs md:text-sm mb-2 text-white/70">문의 번호</p>
           <p className="text-xl md:text-2xl font-bold mb-3">T. 02-3451-9734</p>
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 justify-center text-xs md:text-sm text-gray-300">
