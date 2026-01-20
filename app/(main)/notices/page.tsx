@@ -17,8 +17,9 @@ export default async function NoticesPage() {
   }
 
   // NoticeTable이 요구하는 형태로 변환
-  const rows: NoticeRow[] = (data ?? []).map((n) => ({
+  const rows: NoticeRow[] = (data ?? []).map((n, index) => ({
     id: n.id,
+    no: index + 1,
     title: n.title,
     createdAt: n.posted_at ?? n.created_at?.slice(0, 10) ?? "",
   }));

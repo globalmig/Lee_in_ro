@@ -3,6 +3,7 @@ import Link from "next/link";
 export type NoticeRow = {
   id: number;
   title: string;
+  no: number;
   createdAt: string; // "2026-01-19" 같은 문자열
 };
 
@@ -30,7 +31,7 @@ export default function NoticeTable({ rows, basePath = "/notices" }: Props) {
           <tbody>
             {rows.map((row) => (
               <tr key={row.id} className="border-b border-[#BFBFBF] hover:bg-black/[0.02] transition">
-                <td className="py-6 text-center text-sm text-[#111]">{row.id}</td>
+                <td className="py-6 text-center text-sm text-[#111]">{row.no}</td>
 
                 {/* 제목은 링크 + 가운데 정렬 */}
                 <td className="py-6 text-center text-sm text-[#111]">
