@@ -229,6 +229,10 @@ export default function Header() {
               <MdEmail />
               <span>232237@mirae22.co.kr</span>
             </div>
+
+            <Link href={"/login"} onClick={closeMenu}>
+              관리자페이지
+            </Link>
           </div>
         </div>
       </div>

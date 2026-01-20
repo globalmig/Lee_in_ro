@@ -23,15 +23,24 @@ export default function page() {
           <InquiryForm
             privacyUrl="/privacy"
             onSubmit={async (data) => {
-              // TODO: 여기서 API 호출로 저장하면 됨
-              // await fetch("/api/inquiry", { method: "POST", body: JSON.stringify(data) })
-              console.log("inquiry:", data);
+              const res = await fetch("/api/inquiry", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+              });
+
+              if (!res.ok) {
+                alert("문의 전송에 실패했습니다. 다시 시도해주세요.");
+                return;
+              }
+
+              alert("문의가 정상적으로 접수되었습니다.");
             }}
           />
         </div>
       </section>
 
-      <section id="company" className="relative w-full h-screen overflow-hidden mt-40 border-t">
+      <section id="company" className="relative w-full h-screen overflow-hidden md:block hidden border-t mt-40">
         {/* BG */}
         <div className="absolute inset-x-0 bottom-0 h-[62%] sm:h-[56%] md:h-[52%]">
           <Image src="/AI_bg.png" alt="" fill className="object-cover object-center" priority />
@@ -48,12 +57,12 @@ export default function page() {
               height={982}
               priority
               className="
-              h-auto
-              w-[420px] max-w-[95vw]
-              sm:w-[460px]
-              md:w-[520px]
-              lg:w-[580px]
-            "
+            h-auto
+            w-[420px] max-w-[95vw]
+            sm:w-[460px]
+            md:w-[520px]
+            lg:w-[580px]
+          "
             />
           </div>
 
@@ -70,12 +79,12 @@ export default function page() {
           {/* About: single block (mobile bottom-left / desktop bottom-right) */}
           <div
             className="
-            absolute z-20
-            left-5 bottom-6
-            md:left-auto md:right-10 md:bottom-20
-            text-white text-shadow
-            max-w-[300px] sm:max-w-[360px]
-          "
+          absolute z-20
+          left-5 bottom-6
+          md:left-auto md:right-10 md:bottom-20
+          text-white text-shadow
+          max-w-[300px] sm:max-w-[360px]
+        "
           >
             <h3 className="text-xl font-medium">서울채권지점</h3>
 
