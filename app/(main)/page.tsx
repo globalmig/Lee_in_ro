@@ -44,8 +44,8 @@ export default function page() {
 
             <div className="text-white/80 font-semibold mt-28">
               <p className="text-xl md:text-4xl ">더 이상 스트레스 받지 마세요.</p>
-              <p className="text-xl md:text-4xl py-4">채권관리 · CRM 서비스 · 신용조사</p>
-              <p className="text-xl md:text-4xl">저희가 해결합니다.</p>
+              <p className="text-xl md:text-4xl py-4">채권추심 신용조사 재산조사</p>
+              <p className="text-xl md:text-4xl">업무 위임 가능합니다 </p>
             </div>
             {/* <div className="md:hidden flex flex-col gap-4 lg:gap-6 mt-4">
               <Link href="/company/introduce" className="border border-[#C40452] rounded-lg px-10 lg:px-14 py-3 lg:py-4 text-[#C40452] font-bold  hover:bg-white transition">

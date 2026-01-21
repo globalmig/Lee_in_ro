@@ -71,8 +71,9 @@ export default function page() {
             <Image src="/logo.png" alt="logo" width={240} height={100} className="w-[160px] sm:w-[200px] md:w-[240px] h-auto" />
 
             <div className="text-[#4B4D52]/60 font-semibold mt-10">
-              <p className="text-xl md:text-4xl">더 이상 스트레스 받지 마세요.</p>
-              <p className="text-xl md:text-4xl">저희가 해결합니다.</p>
+              <p className="text-xl md:text-4xl ">더 이상 스트레스 받지 마세요.</p>
+              <p className="text-xl md:text-4xl py-4">채권추심 신용조사 재산조사</p>
+              <p className="text-xl md:text-4xl">업무 위임 가능합니다 </p>
             </div>
           </div>
 
