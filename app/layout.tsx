@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Script from "next/script";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -114,6 +115,13 @@ export default function RootLayout({
     <html lang="ko">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="min-h-screen">{children}</div>
+        <Script src="//wsa.mig-log.com/wsalog.js" strategy="afterInteractive" />
+        <Script id="wsa-init" strategy="afterInteractive">
+          {`
+            wsa.inflow("xn--hj2bz6fwvai7op8eooc.com");
+            wsa_do(wsa);
+          `}
+        </Script>
       </body>
     </html>
   );
