@@ -118,8 +118,10 @@ export default function RootLayout({
         <Script src="//wsa.mig-log.com/wsalog.js" strategy="afterInteractive" />
         <Script id="wsa-init" strategy="afterInteractive">
           {`
-            wsa.inflow("xn--hj2bz6fwvai7op8eooc.com");
-            wsa_do(wsa);
+            if (typeof wsa !== 'undefined') {
+              wsa.inflow("xn--hj2bz6fwvai7op8eooc.com");
+              wsa_do(wsa);
+            }
           `}
         </Script>
       </body>
