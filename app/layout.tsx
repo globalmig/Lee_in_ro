@@ -115,15 +115,19 @@ export default function RootLayout({
     <html lang="ko">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="min-h-screen">{children}</div>
-        <Script src="//wsa.mig-log.com/wsalog.js" strategy="afterInteractive" />
-        <Script id="wsa-init" strategy="afterInteractive">
-          {`
-            if (typeof wsa !== 'undefined') {
-              wsa.inflow("xn--hj2bz6fwvai7op8eooc.com");
+        <Script
+          src="https://wsa.mig-log.com/wsalog.js"
+          strategy="afterInteractive"
+          onLoad={() => {
+            // @ts-ignore
+            if (typeof wsa !== "undefined") {
+              // @ts-ignore
+              wsa.inflow("www.miraeinro.com");
+              // @ts-ignore
               wsa_do(wsa);
             }
-          `}
-        </Script>
+          }}
+        />
       </body>
     </html>
   );
