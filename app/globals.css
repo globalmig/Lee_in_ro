@@ -5,9 +5,25 @@
 
 html,
 body {
-  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  font-family:
+    "Pretendard",
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    "Helvetica Neue",
+    "Segoe UI",
+    "Apple SD Gothic Neo",
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
 }
 /* npm install pretendard */
+
+._wsaicon {
+  position: fixed !important;
+  z-index: 99999 !important;
+}
 
 html {
   scroll-snap-type: y mandatory;
@@ -59,7 +75,9 @@ html {
 
   /* 여러 개의 그림자 중첩 */
   .multiple-shadow {
-    text-shadow: 1px 1px 2px #000, 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow:
+      1px 1px 2px #000,
+      2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   :root {
     --background: 0 0% 100%;
