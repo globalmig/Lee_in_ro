@@ -12,8 +12,14 @@ export default function GlobalmigLog() {
         window.wsa = window.wsa || {};
         // @ts-ignore
         window.wsa.inflow("www.miraeinro.com");
-        // @ts-ignore
-        window.wsa_do(window.wsa);
+
+        // body가 준비될 때까지 한번 더 보장
+        const run = () => {
+          // @ts-ignore
+          window.wsa_do(window.wsa);
+        };
+        if (document.body) run();
+        else window.addEventListener("DOMContentLoaded", run, { once: true });
       }}
     />
   );
