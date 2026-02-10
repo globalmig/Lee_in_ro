@@ -4,6 +4,7 @@ export default function NaverLog() {
   return (
     <Script
       src="//wcs.naver.net/wcslog.js"
+      strategy="beforeInteractive"
        dangerouslySetInnerHTML={{
        __html: `
        if (!wcs_add) var wcs_add={};
