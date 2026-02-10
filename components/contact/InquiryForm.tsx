@@ -3,6 +3,19 @@
 
 import React, { useMemo, useRef, useState } from "react";
 
+declare global {
+  interface Window {
+    wcs?: {
+      trans: (conv: { type: string; value?: string }) => void;
+      [key: string]: any; 
+    };
+    wcs_add?: {
+      wa?: string;
+      [key: string]: any;
+    };
+  }
+}
+
 type FormState = {
   name: string;
   phone: string;
@@ -122,6 +135,20 @@ export default function InquiryForm({ onSubmit, privacyUrl = "/privacy" }: Props
       };
 
       if (onSubmit) await onSubmit(payload);
+
+      // --- NAVER 신청완료(lead) 스크립트 실행 ---
+      if (window.wcs) {
+        if (!window.wcs_add) window.wcs_add = {};
+        
+        window.wcs_add.wa = 's_3146148b17b2'; 
+
+        const _conv = {
+          type: 'lead',
+        };
+        
+        window.wcs.trans(_conv);
+      }
+      // ---------------------------------------
 
       setDone(true);
       setForm({ name: "", phone: "", message: "", agree: false });

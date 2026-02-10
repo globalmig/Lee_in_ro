@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Script from "next/script";
 import GlobalmigLog from "@/components/GlobalmigLog";
+import NaverLog from "@/components/NaverLog";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -120,6 +121,8 @@ export default function RootLayout({
         <Script type="text/javascript">wsa.inflow("www.miraeinro.com"); wsa_do(wsa);</Script> */}
         {/* <!-- 공통 적용 스크립트 , 모든 페이지에 노출되도록 설치. 단 전환페이지 설정값보다 항상 하단에 위치해야함 --> */}
         <GlobalmigLog />
+        {/* Naver-Log Script */}
+        <NaverLog/>
       </body>
     </html>
   );

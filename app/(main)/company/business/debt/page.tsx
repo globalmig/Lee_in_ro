@@ -16,7 +16,7 @@ export default function page() {
   ];
 
   return (
-    <div>
+     <div>
       <Hero img={"/business_hero_bg.png"} title={"사업영역"} />
 
       <Tabs />
