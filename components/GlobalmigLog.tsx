@@ -11,7 +11,7 @@ export default function GlobalmigLog() {
         // @ts-ignore
         window.wsa = window.wsa || {};
         // @ts-ignore
-        window.wsa.inflow("www.miraeinro.com");
+        window.wsa.inflow("miraeinro.com");
 
         // body가 준비될 때까지 한번 더 보장
         const run = () => {

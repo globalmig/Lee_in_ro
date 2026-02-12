@@ -118,7 +118,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="min-h-screen">{children}</div>
         {/* <Script type="text/javascript" src="//wsa.mig-log.com/wsalog.js"></Script>
-        <Script type="text/javascript">wsa.inflow("www.miraeinro.com"); wsa_do(wsa);</Script> */}
+        <Script type="text/javascript">wsa.inflow("miraeinro.com"); wsa_do(wsa);</Script> */}
         {/* <!-- 공통 적용 스크립트 , 모든 페이지에 노출되도록 설치. 단 전환페이지 설정값보다 항상 하단에 위치해야함 --> */}
         <GlobalmigLog />
         {/* Naver-Log Script */}

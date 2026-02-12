@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.miraeinro.com/
+Host: https://miraeinro.com/
 
 # Sitemaps
-Sitemap: https://www.miraeinro.com/sitemap.xml
+Sitemap: https://miraeinro.com/sitemap.xml
