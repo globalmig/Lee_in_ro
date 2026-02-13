@@ -6,7 +6,7 @@ export default function NaverLog() {
   return (
     <Script
       src="//wcs.naver.net/wcslog.js"
-      strategy="beforeInteractive"
+      strategy="afterInteractive"
       onLoad={() => {
         // @ts-ignore
         window.wcs_add = window.wcs_add || {};
